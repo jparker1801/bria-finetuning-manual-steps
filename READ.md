@@ -1,6 +1,10 @@
-# Bria Automotive AI Tools
+# Bria AI Fine-Tuning: Manual Workflow
 
-This project uses the Bria AI API to segment vehicle parts and generate realistic reflections on car surfaces.
+This repository contains a step-by-step, manual Python workflow for fine-tuning a custom AI model using the [Bria AI Tailored Generation API](https://docs.bria.ai/tailored-generation). 
+
+Because AI model training takes time and requires strict sequential steps, this project is designed to be executed **one section at a time** by commenting and uncommenting specific blocks in the `main1.py` file.
+
+---
 
 ## 🚀 Quick Start
 
