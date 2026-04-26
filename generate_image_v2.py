@@ -25,7 +25,7 @@ def generate_image_function_v2(model_id, prompt):
             print("Error: Failed to Parse JSON Response:", response.text)
             return None
 
-        # Handle Asynchronous 202 Response
+        
         if response.status_code == 202:
             request_id = result.get("request_id")
             print("\n" + "=" * 50)

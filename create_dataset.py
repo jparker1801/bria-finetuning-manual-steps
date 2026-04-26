@@ -6,11 +6,11 @@ load_dotenv()
 bria_api_key = os.getenv("BRIA_API_KEY")
 
 def create_dataset_function(project_id, dataset_name):
-    # Base URL for datasets
+    
     url = "https://engine.prod.bria-api.com/v1/tailored-gen/datasets"
     headers = {"Content-Type": "application/json", "api_token": bria_api_key}
     
-    # Passing both the project ID to link it, and the name of the dataset
+   
     payload = {
         "project_id": project_id,
         "name": dataset_name

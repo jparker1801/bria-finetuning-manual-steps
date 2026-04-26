@@ -29,7 +29,7 @@ def generate_image_function(tailored_model_id, prompt, output_filename):
         if response.status_code in [200, 201]:
             print("Image generated successfully! Attempting to download...")
             
-            # Extracting the URL from Bria's response
+            
             image_url = None
             if "urls" in result:
                 image_url = result["urls"][0]

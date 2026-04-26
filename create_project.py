@@ -6,7 +6,7 @@ load_dotenv()
 bria_api_key = os.getenv("BRIA_API_KEY")
 
 def create_project_function(project_name, ip_name, ip_description, ip_medium, ip_type):
-    # Base URL for creating projects as per tailored generation docs
+    
     url = "https://engine.prod.bria-api.com/v1/tailored-gen/projects" 
     headers = {"Content-Type": "application/json", "api_token": bria_api_key}
     

@@ -25,7 +25,7 @@ api_key = os.getenv("BRIA_API_KEY")
 # --------------------------------------------------------------------------------------------------
 
 # Define your project characteristics
-# project_name = "FIBO TG Test"
+# project_name = "Branded Character"
 # ip_name = "Adventure Series Characters"
 # ip_description = "A set of adventure game characters with unique personalities"
 # ip_medium = "illustration"
@@ -42,10 +42,9 @@ api_key = os.getenv("BRIA_API_KEY")
 # --------------------------------------------------------------------------------------------------
 # Step 2A: Create the Dataset Container
 # --------------------------------------------------------------------------------------------------
-# We will create the empty dataset first, confirm the ID, and then tackle the image upload loop!
 
-# project_id = 13246 
-# dataset_name = "Dragon_Images"
+# project_id = {add-project_id-from-response} 
+# dataset_name = "{add-name-here}"
 
 # print("Initializing Step 2: Dataset Creation...")
 # dataset_data = create_dataset_function(project_id, dataset_name)
@@ -58,22 +57,20 @@ api_key = os.getenv("BRIA_API_KEY")
 # Step 2B: Upload Images to the Dataset
 # --------------------------------------------------------------------------------------------------
 
-# project_id = 13246 
-# dataset_id = 15861 
+# project_id = {add-project_id-from-response}  
+# dataset_id = {add-dataset_id-from-response}  
 
 # project_dir = os.path.dirname(os.path.abspath(__file__))
 # dataset_dir = os.path.join(project_dir, "dataset")
 
 # print("Initializing Step 2b: Image Upload...")
 
-# # Check if the "dataset" folder actually exists
 # if not os.path.exists(dataset_dir):
 #     print(f"Error: The folder '{dataset_dir}' does not exist. Please create it and add images.")
 # else:
 #     # Valid extensions to look for
 #     valid_extensions = ('.png', '.jpg', '.jpeg', '.webp')
     
-#     # Loop through all files in the "dataset" folder
 #     for filename in sorted(os.listdir(dataset_dir)):
 #         if filename.lower().endswith(valid_extensions):
 #             image_path = os.path.join(dataset_dir, filename)
@@ -90,9 +87,9 @@ api_key = os.getenv("BRIA_API_KEY")
 # Step 3A: Create the Model
 # --------------------------------------------------------------------------------------------------
 
-# project_id = 13246 
-# name = "Dragon_Fine_Tuned_Model"
-# dataset_id = 15861 
+# project_id = {add-project_id-from-response}  
+# name = "{add-model-name}"
+# dataset_id = {add-dataset_id-from-response}  
 # training_mode = "fully_automated"
 # description = "A model trained on Lora character illustrations"
 
@@ -107,7 +104,7 @@ api_key = os.getenv("BRIA_API_KEY")
 # Step 3B: Set Model Status to Completed
 # --------------------------------------------------------------------------------------------------
 
-# dataset_id = 15861 
+# dataset_id = {add-dataset_id-from-response}  
 
 # print("Initializing Step 3a.5: Marking Dataset as Completed...")
 # complete_data = complete_dataset_function(dataset_id)
@@ -120,7 +117,7 @@ api_key = os.getenv("BRIA_API_KEY")
 # Step 3C: Start Training the Model
 # --------------------------------------------------------------------------------------------------
 
-# model_id = 13411 
+# model_id = {add-model_id-from-response}  
 
 # print("Initializing Step 3b: Starting Model Training...")
 # start_data = start_training_function(model_id)
@@ -130,26 +127,11 @@ api_key = os.getenv("BRIA_API_KEY")
 #     print("Step 3b Complete. The model is now training!")
 
 # --------------------------------------------------------------------------------------------------
-# Step 3D: Check Model Status
-# --------------------------------------------------------------------------------------------------
-
-# model_id = 13411 
-
-# print("Initializing Step 3c: Checking Model Status...")
-# current_status = check_model_status_function(model_id)
-
-# print("-" * 50)
-# if current_status and current_status.lower() in ["active", "completed", "ready"]:
-#     print("Your model is ready! You can now uncomment and run Step 4 (Generate Image).")
-# else:
-#     print(f"Model is currently: {current_status}. Please wait a bit longer before generating.")
-
-# --------------------------------------------------------------------------------------------------
 # Step 3D: Automate Status Checking (Polling)
 # --------------------------------------------------------------------------------------------------
 
-# model_id = 13411 
-# #Change back to 13411
+# model_id = {add-model_id-from-response}  
+
 # sleep_minutes = 10 # Change this to 10 or 15 as you prefer
 # sleep_seconds = sleep_minutes * 60
 
@@ -182,7 +164,7 @@ api_key = os.getenv("BRIA_API_KEY")
 #         time.sleep(sleep_seconds)
 
 # --------------------------------------------------------------------------------------------------
-# Step 4: Generate a Tailored Image /v1
+# Step 4: Generate a Tailored Image /v1 (API created)
 # --------------------------------------------------------------------------------------------------
 
 # model_id = 13411
@@ -198,12 +180,12 @@ api_key = os.getenv("BRIA_API_KEY")
 #     print("Full API Response:", generation_data)
 
 # --------------------------------------------------------------------------------------------------
-# Step 4: Generate a Tailored Image /v2
+# Step 4: Generate a Tailored Image /v2 (Console created)
 # --------------------------------------------------------------------------------------------------
 
-# model_id = 13412
+# model_id = {add-model_id-from-response} 
 # prompt = "An illustration of a character named Adventure Series Dragon Characters, A set of adventure game characters with unique personalities, a fierce dragon flying over a futuristic city at night, neon lights illuminating its scales, cyberpunk style"
-# output_filename = "cyberpunk_dragon.jpg"
+# output_filename = "{add-output-filename}.jpg"
 
 # print("\nInitializing Step 4: Image Generation...")
 # generation_data = generate_image_function_v2(model_id, prompt)
@@ -217,8 +199,8 @@ api_key = os.getenv("BRIA_API_KEY")
 # Step 4B: Poll and Download (Paste the ID here and run this step)
 # --------------------------------------------------------------------------------------------------
 
-# manual_request_id = "1a99cba8e28e41ba899cfcb68ff68454"
-# output_filename = "cyberpunk_dragon.jpg"
+# manual_request_id = "{add-manual_request_id-from-response}"
+# output_filename = "{add-output-filename}.jpg"
 
 # print("\nInitializing Step 4B: Polling and Downloading...")
 # final_data = poll_image_status_function(manual_request_id, output_filename)
