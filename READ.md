@@ -19,12 +19,12 @@ cd bria-finetuning-manual-steps
 pip install -r requirements.txt
 ```
 
-3. **Run the setup.py:**
+## 3. **Run the setup.py:**
 ```bash
 python3 setup.py
 ```
 
-4. **Step-by-Step Guide:**
+## 4. **Step-by-Step Guide:**
 Step 1: Create a Project
 Uncomment Step 1. Define your project characteristics (name, IP type, medium). Run the script to generate your project_id. Update the project_id variable in Step 2A.
 
