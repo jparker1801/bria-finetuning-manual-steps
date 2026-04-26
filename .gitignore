@@ -1,0 +1,23 @@
+# Environments and Secrets (CRITICAL)
+.env
+.env.local
+.env.*
+
+# Python Cache and Compiled Files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual Environments (If you decide to use one later)
+venv/
+env/
+.venv/
+
+# macOS System Files
+.DS_Store
+
+# Project Specific Data & Output Folders
+dataset/*
+!dataset/.gitkeep
+generated_images/*
+!generated_images/.gitkeep
