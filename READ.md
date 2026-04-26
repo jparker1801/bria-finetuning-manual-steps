@@ -13,15 +13,15 @@ Because AI model training takes time and requires strict sequential steps, this 
 git clone [https://github.com/jparker1801/bria-finetuning-manual-steps.git](https://github.com/jparker1801/bria-finetuning-manual-steps.git)
 cd bria-finetuning-manual-steps
 
-2. **. Install Required Libraries**
-Make sure you have Python installed, then install the necessary dependencies:
+2. **Install Required Librarie:** 
 ```bash
 pip install -r requirements.txt
 
-3. **. Run the setup.py**
+3. **Run the setup.py:**
+```bash
 python3 setup.py
 
-📋 Step-by-Step Guide
+4. **Step-by-Step Guide:**
 Step 1: Create a Project
 Uncomment Step 1. Define your project characteristics (name, IP type, medium). Run the script to generate your project_id. Update the project_id variable in Step 2A.
 
