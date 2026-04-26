@@ -148,38 +148,38 @@ api_key = os.getenv("BRIA_API_KEY")
 # Step 3D: Automate Status Checking (Polling)
 # --------------------------------------------------------------------------------------------------
 
-model_id = 13411 
-#Change back to 13411
-sleep_minutes = 10 # Change this to 10 or 15 as you prefer
-sleep_seconds = sleep_minutes * 60
+# model_id = 13411 
+# #Change back to 13411
+# sleep_minutes = 10 # Change this to 10 or 15 as you prefer
+# sleep_seconds = sleep_minutes * 60
 
-print(f"Initializing Step 3c: Automating Model Status Check...")
-print(f"Polling every {sleep_minutes} minutes. Feel free to leave this running in the background!")
-print("-" * 50)
+# print(f"Initializing Step 3c: Automating Model Status Check...")
+# print(f"Polling every {sleep_minutes} minutes. Feel free to leave this running in the background!")
+# print("-" * 50)
 
-while True:
-    current_status = check_model_status_function(model_id)
+# while True:
+#     current_status = check_model_status_function(model_id)
     
-    if current_status and current_status.lower() in ["active", "completed", "ready"]:
-        print("\n" + "=" * 50)
-        print("The model has finished training! Moving to generation...")
-        print("=" * 50)
-        break # Exit the loop and proceed to generation
+#     if current_status and current_status.lower() in ["active", "completed", "ready"]:
+#         print("\n" + "=" * 50)
+#         print("The model has finished training! Moving to generation...")
+#         print("=" * 50)
+#         break # Exit the loop and proceed to generation
     
-    elif current_status and current_status.lower() in ["failed", "error"]:
-        print("\nModel training failed! Please check the Bria web UI for more details.")
-        exit() # Stop the script entirely
+#     elif current_status and current_status.lower() in ["failed", "error"]:
+#         print("\nModel training failed! Please check the Bria web UI for more details.")
+#         exit() # Stop the script entirely
         
-    else:
-        # Calculate the exact time of the next check
-        next_check = datetime.now() + timedelta(seconds=sleep_seconds)
-        formatted_time = next_check.strftime("%I:%M:%S %p") # Formats as HH:MM:SS AM/PM
+#     else:
+#         # Calculate the exact time of the next check
+#         next_check = datetime.now() + timedelta(seconds=sleep_seconds)
+#         formatted_time = next_check.strftime("%I:%M:%S %p") # Formats as HH:MM:SS AM/PM
         
-        print(f"Model is currently: {current_status}.")
-        print(f"Sleeping for {sleep_minutes} minutes. Next check will occur at: {formatted_time}")
-        print("-" * 50)
+#         print(f"Model is currently: {current_status}.")
+#         print(f"Sleeping for {sleep_minutes} minutes. Next check will occur at: {formatted_time}")
+#         print("-" * 50)
         
-        time.sleep(sleep_seconds)
+#         time.sleep(sleep_seconds)
 
 # --------------------------------------------------------------------------------------------------
 # Step 4: Generate a Tailored Image /v1
